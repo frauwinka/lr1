@@ -21,7 +21,6 @@ def users():
 def user(ID):
     for some_user in users_list:
         if some_user['id'] == int(ID):
-            s = f'<h2>{some_user["name"]} {some_user["surname"]}</h2>\n<p>age: {some_user["age"]}</p>\n<p>id: {some_user["id"]}</p>'
             return render_template('user.html', some_user=some_user)
     return abort(404)
 
